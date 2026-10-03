@@ -234,84 +234,90 @@ export default function LandingPage() {
       </header>
 
       {/* Main Content */}
-      <main className="max-w-7xl mx-auto px-4 md:px-8 py-10 space-y-20">
-        {/* HERO SECTION */}
-        <section className="relative overflow-hidden rounded-2xl border border-[#4B6F44]/40 p-8 md:p-12 space-y-10 bg-[#0A0A0A]/90 backdrop-blur-sm">
-          {/* Background Image Overlay from public/bg.webp */}
+      <main className="w-full space-y-20">
+        {/* FULL SCREEN HERO SECTION WITH BG.WEBP */}
+        <section className="relative w-full overflow-hidden border-b border-[#4B6F44]/30 py-16 md:py-24 px-4 md:px-8">
+          {/* Full Screen Background Image from public/bg.webp */}
           <div 
-            className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-40 mix-blend-luminosity filter brightness-75 contrast-125 pointer-events-none -z-10"
+            className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-65 mix-blend-luminosity filter brightness-85 contrast-125 pointer-events-none -z-10"
             style={{ backgroundImage: `url('/bg.webp')` }}
           />
-          {/* Dark Gradient Overlay for optimal visual contrast */}
-          <div className="absolute inset-0 bg-gradient-to-r from-[#050505] via-[#050505]/80 to-transparent pointer-events-none -z-10" />
-          <div className="absolute inset-0 bg-gradient-to-t from-[#050505] via-transparent to-[#050505]/70 pointer-events-none -z-10" />
-          <div className="absolute inset-0 scanlines opacity-20 pointer-events-none -z-10" />
+          {/* Subtle Dark Gradient Overlay for perfect readability */}
+          <div className="absolute inset-0 bg-gradient-to-r from-[#050505]/90 via-[#050505]/60 to-[#050505]/40 pointer-events-none -z-10" />
+          <div className="absolute inset-0 bg-gradient-to-t from-[#050505] via-transparent to-[#050505]/60 pointer-events-none -z-10" />
+          <div className="absolute inset-0 scanlines opacity-15 pointer-events-none -z-10" />
 
-          <div className="relative z-10 max-w-4xl space-y-6">
-            <h1 className="text-3xl md:text-5xl font-extrabold tracking-tight uppercase leading-tight text-[#F5F5F5] font-mono">
-              Predict Tomorrow&apos;s Supply Needs Before They Become Mission Risks
-            </h1>
+          <div className="max-w-7xl mx-auto space-y-12 relative z-10">
+            {/* Hero Text & CTA Buttons */}
+            <div className="max-w-4xl space-y-6">
+              <h1 className="text-3xl md:text-6xl font-extrabold tracking-tight uppercase leading-tight text-[#F5F5F5] font-mono drop-shadow-md">
+                Predict Tomorrow&apos;s Supply Needs Before They Become Mission Risks
+              </h1>
 
-            <p className="text-base md:text-lg text-[#A0A0A0] leading-relaxed max-w-3xl">
-              Transforming reactive military logistics into an intelligent predictive supply chain capable of forecasting demand, preventing shortages, optimizing resupply missions and maintaining operational readiness across forward formations.
-            </p>
+              <p className="text-base md:text-xl text-[#D0D0D0] leading-relaxed max-w-3xl font-medium drop-shadow-sm">
+                Transforming reactive military logistics into an intelligent predictive supply chain capable of forecasting demand, preventing shortages, optimizing resupply missions and maintaining operational readiness across forward formations.
+              </p>
 
-            <div className="flex flex-wrap items-center gap-4 pt-2">
-              <Link
-                href="/dashboard"
-                className="px-6 py-3.5 bg-[#4B6F44] hover:bg-[#5B8652] text-[#F5F5F5] font-mono text-xs font-bold uppercase tracking-widest border border-[#6B8E23] transition-all flex items-center gap-2.5 shadow-lg shadow-[#4B6F44]/20"
-              >
-                <span>Launch Command Center</span>
-                <ChevronRight className="w-4 h-4 text-[#2A9D8F]" />
-              </Link>
+              <div className="flex flex-wrap items-center gap-4 pt-3">
+                <Link
+                  href="/dashboard"
+                  className="px-7 py-4 bg-[#4B6F44] hover:bg-[#5B8652] text-[#F5F5F5] font-mono text-xs font-bold uppercase tracking-widest border border-[#6B8E23] transition-all flex items-center gap-2.5 shadow-xl shadow-[#4B6F44]/30 hover:scale-105"
+                >
+                  <span>Launch Command Center</span>
+                  <ChevronRight className="w-4 h-4 text-[#2A9D8F]" />
+                </Link>
 
-              <button
-                onClick={() => setSimulationModal(true)}
-                className="px-6 py-3.5 bg-[#111111]/80 hover:bg-[#1E2E1B] text-[#F5F5F5] font-mono text-xs font-bold uppercase tracking-widest border border-[#4B6F44]/50 hover:border-[#6B8E23] transition-all flex items-center gap-2.5 backdrop-blur-xs"
-              >
-                <Play className="w-4 h-4 text-[#D4A017]" />
-                <span>View Live Simulation</span>
-              </button>
-            </div>
-          </div>
-
-          {/* Key Statistics Grid */}
-          <div className="relative z-10 grid grid-cols-2 md:grid-cols-4 gap-4 pt-4">
-            {[
-              { label: 'Supply Availability', value: '98.4%', sub: 'Across Northern & Eastern Commands' },
-              { label: 'Reduction In Delays', value: '34%', sub: 'Via Terrain-Aware Route Planning' },
-              { label: 'Shortage Prediction Window', value: '72 Hours', sub: 'Early Alert Horizon' },
-              { label: 'Assets Tracked', value: '5000+', sub: 'Vehicles, Depots & Outposts' }
-            ].map((stat, idx) => (
-              <div
-                key={idx}
-                className="mil-panel p-4 space-y-1 bg-[#0A0A0A]/85 backdrop-blur-md border border-[#4B6F44]/40 font-mono"
-              >
-                <span className="text-2xl md:text-3xl font-extrabold text-[#F5F5F5] tracking-tight">
-                  {stat.value}
-                </span>
-                <span className="text-xs text-[#6B8E23] font-semibold block uppercase">
-                  {stat.label}
-                </span>
-                <span className="text-[10px] text-[#A0A0A0] block">
-                  {stat.sub}
-                </span>
+                <button
+                  onClick={() => setSimulationModal(true)}
+                  className="px-7 py-4 bg-[#0A0A0A]/70 hover:bg-[#1E2E1B] text-[#F5F5F5] font-mono text-xs font-bold uppercase tracking-widest border border-[#4B6F44]/60 hover:border-[#6B8E23] transition-all flex items-center gap-2.5 backdrop-blur-md hover:scale-105"
+                >
+                  <Play className="w-4 h-4 text-[#D4A017]" />
+                  <span>View Live Simulation</span>
+                </button>
               </div>
-            ))}
-          </div>
-
-          {/* Military Operations Interactive Map Visualization */}
-          <div className="relative z-10 space-y-3">
-            <div className="flex items-center justify-between font-mono text-xs text-[#A0A0A0] px-1">
-              <span className="flex items-center gap-2 text-[#F5F5F5] font-semibold">
-                <Activity className="w-4 h-4 text-[#4B6F44]" />
-                FORWARD THEATER OPERATIONAL SUPPLY MAP
-              </span>
-              <span>COMMAND SECTORS: NORTHERN // EASTERN // WESTERN</span>
             </div>
-            <MilitaryMap interactive={true} />
+
+            {/* Key Statistics Grid with Glassmorphism */}
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-4 pt-4">
+              {[
+                { label: 'Supply Availability', value: '98.4%', sub: 'Across Northern & Eastern Commands' },
+                { label: 'Reduction In Delays', value: '34%', sub: 'Via Terrain-Aware Route Planning' },
+                { label: 'Shortage Prediction Window', value: '72 Hours', sub: 'Early Alert Horizon' },
+                { label: 'Assets Tracked', value: '5000+', sub: 'Vehicles, Depots & Outposts' }
+              ].map((stat, idx) => (
+                <div
+                  key={idx}
+                  className="mil-panel p-5 space-y-1.5 bg-[#0A0A0A]/70 backdrop-blur-md border border-[#4B6F44]/50 font-mono hover:border-[#6B8E23] transition-colors"
+                >
+                  <span className="text-3xl md:text-4xl font-extrabold text-[#F5F5F5] tracking-tight block">
+                    {stat.value}
+                  </span>
+                  <span className="text-xs text-[#6B8E23] font-bold block uppercase tracking-wider">
+                    {stat.label}
+                  </span>
+                  <span className="text-[11px] text-[#A0A0A0] block">
+                    {stat.sub}
+                  </span>
+                </div>
+              ))}
+            </div>
+
+            {/* Military Operations Interactive Map Visualization */}
+            <div className="space-y-3 pt-4">
+              <div className="flex items-center justify-between font-mono text-xs text-[#A0A0A0] px-1">
+                <span className="flex items-center gap-2 text-[#F5F5F5] font-semibold">
+                  <Activity className="w-4 h-4 text-[#4B6F44]" />
+                  FORWARD THEATER OPERATIONAL SUPPLY MAP
+                </span>
+                <span>COMMAND SECTORS: NORTHERN // EASTERN // WESTERN</span>
+              </div>
+              <MilitaryMap interactive={true} />
+            </div>
           </div>
         </section>
+
+        {/* CONTAINER FOR REST OF SECTIONS */}
+        <div className="max-w-7xl mx-auto px-4 md:px-8 space-y-20">
 
         {/* PROBLEM SECTION */}
         <section className="space-y-8 pt-6 border-t border-[#4B6F44]/30">
@@ -481,7 +487,8 @@ export default function LandingPage() {
             </div>
           </div>
         </section>
-      </main>
+      </div>
+    </main>
 
       {/* Footer */}
       <footer className="mt-20 border-t border-[#4B6F44]/30 bg-[#050505] py-8 px-4 md:px-8 font-mono text-xs text-[#A0A0A0]">
