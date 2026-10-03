@@ -239,13 +239,13 @@ export default function LandingPage() {
         <section className="relative w-full overflow-hidden border-b border-[#4B6F44]/30 py-16 md:py-24 px-4 md:px-8">
           {/* Full Screen Background Image from public/bg.webp */}
           <div 
-            className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-65 mix-blend-luminosity filter brightness-85 contrast-125 pointer-events-none -z-10"
+            className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-70 filter brightness-95 contrast-110 pointer-events-none -z-10"
             style={{ backgroundImage: `url('/bg.webp')` }}
           />
-          {/* Subtle Dark Gradient Overlay for perfect readability */}
-          <div className="absolute inset-0 bg-gradient-to-r from-[#050505]/90 via-[#050505]/60 to-[#050505]/40 pointer-events-none -z-10" />
-          <div className="absolute inset-0 bg-gradient-to-t from-[#050505] via-transparent to-[#050505]/60 pointer-events-none -z-10" />
-          <div className="absolute inset-0 scanlines opacity-15 pointer-events-none -z-10" />
+          {/* Subtle Dark Gradient Overlay for perfect text contrast while preserving image visibility */}
+          <div className="absolute inset-0 bg-gradient-to-r from-[#050505]/95 via-[#050505]/50 to-[#050505]/20 pointer-events-none -z-10" />
+          <div className="absolute inset-0 bg-gradient-to-t from-[#050505] via-transparent to-[#050505]/40 pointer-events-none -z-10" />
+          <div className="absolute inset-0 scanlines opacity-10 pointer-events-none -z-10" />
 
           <div className="max-w-7xl mx-auto space-y-12 relative z-10">
             {/* Hero Text & CTA Buttons */}

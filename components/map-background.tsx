@@ -8,7 +8,7 @@ export const MapBackground: React.FC = () => {
     <div className="fixed inset-0 -z-20 overflow-hidden pointer-events-none bg-[#050505]">
       {/* Background Image from public/bg.webp */}
       <div 
-        className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-30 mix-blend-luminosity filter brightness-75 contrast-125 transition-opacity duration-1000"
+        className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-40 filter brightness-90 contrast-110 transition-opacity duration-1000"
         style={{ backgroundImage: `url('/bg.webp')` }}
       />
       
