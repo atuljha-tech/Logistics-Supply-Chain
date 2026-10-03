@@ -6,14 +6,14 @@ import { motion } from 'framer-motion'
 export const MapBackground: React.FC = () => {
   return (
     <div className="fixed inset-0 -z-20 overflow-hidden pointer-events-none bg-[#050505]">
-      {/* Background Image from public/bg.webp */}
+      {/* Background Image from public/bg.jpg */}
       <div 
-        className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-40 filter brightness-90 contrast-110 transition-opacity duration-1000"
-        style={{ backgroundImage: `url('/bg.webp')` }}
+        className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-50 filter brightness-95 contrast-110 transition-opacity duration-1000"
+        style={{ backgroundImage: `url('/bg.jpg')` }}
       />
       
-      {/* Vignette Overlay & Dark Gradient */}
-      <div className="absolute inset-0 bg-gradient-to-b from-[#050505]/85 via-[#050505]/70 to-[#050505]/90" />
+      {/* Subtle Vignette Overlay & Dark Gradient */}
+      <div className="absolute inset-0 bg-gradient-to-b from-[#050505]/70 via-[#050505]/50 to-[#050505]/80" />
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_transparent_0%,_rgba(5,5,5,0.85)_100%)]" />
 
       {/* Tactical Grid Pattern */}

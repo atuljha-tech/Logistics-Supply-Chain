@@ -235,17 +235,19 @@ export default function LandingPage() {
 
       {/* Main Content */}
       <main className="w-full space-y-20">
-        {/* FULL SCREEN HERO SECTION WITH BG.WEBP */}
+        {/* FULL SCREEN HERO SECTION WITH BG.JPG */}
         <section className="relative w-full overflow-hidden border-b border-[#4B6F44]/30 py-16 md:py-24 px-4 md:px-8">
-          {/* Full Screen Background Image from public/bg.webp */}
-          <div 
-            className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-70 filter brightness-95 contrast-110 pointer-events-none -z-10"
-            style={{ backgroundImage: `url('/bg.webp')` }}
-          />
-          {/* Subtle Dark Gradient Overlay for perfect text contrast while preserving image visibility */}
-          <div className="absolute inset-0 bg-gradient-to-r from-[#050505]/95 via-[#050505]/50 to-[#050505]/20 pointer-events-none -z-10" />
-          <div className="absolute inset-0 bg-gradient-to-t from-[#050505] via-transparent to-[#050505]/40 pointer-events-none -z-10" />
-          <div className="absolute inset-0 scanlines opacity-10 pointer-events-none -z-10" />
+          {/* Full Screen Background Image from public/bg.jpg */}
+          <div className="absolute inset-0 pointer-events-none -z-10">
+            <img 
+              src="/bg.jpg" 
+              alt="Sentinel Supply Hero Background" 
+              className="w-full h-full object-cover object-center opacity-85 filter brightness-100 contrast-105"
+            />
+          </div>
+          {/* Light gradient overlay just behind text to keep text sharp while bg.jpg is fully visible */}
+          <div className="absolute inset-0 bg-gradient-to-r from-[#050505]/85 via-[#050505]/40 to-transparent pointer-events-none -z-10" />
+          <div className="absolute inset-0 bg-gradient-to-t from-[#050505] via-transparent to-[#050505]/30 pointer-events-none -z-10" />
 
           <div className="max-w-7xl mx-auto space-y-12 relative z-10">
             {/* Hero Text & CTA Buttons */}
