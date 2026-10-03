@@ -235,12 +235,12 @@ export default function LandingPage() {
 
       {/* Main Content */}
       <main className="w-full space-y-20">
-        {/* FULL SCREEN HERO SECTION WITH BG.JPG */}
+        {/* FULL SCREEN HERO SECTION WITH BG.WEBP */}
         <section className="relative w-full overflow-hidden border-b border-[#4B6F44]/30 py-16 md:py-24 px-4 md:px-8">
-          {/* Full Screen Background Image from public/bg.jpg with correct z-index */}
+          {/* Full Screen Background Image from public/bg.webp with correct z-index */}
           <div className="absolute inset-0 pointer-events-none z-0">
             <img 
-              src="/bg.jpg" 
+              src="/bg.webp" 
               alt="Sentinel Supply Hero Background" 
               className="w-full h-full object-cover object-center opacity-85 filter brightness-100 contrast-105"
             />

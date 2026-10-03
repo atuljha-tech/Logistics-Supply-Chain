@@ -6,10 +6,10 @@ import { motion } from 'framer-motion'
 export const MapBackground: React.FC = () => {
   return (
     <div className="fixed inset-0 -z-10 overflow-hidden pointer-events-none bg-[#050505]">
-      {/* Background Image from public/bg.jpg */}
+      {/* Background Image from public/bg.webp */}
       <div 
         className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-60 filter brightness-95 contrast-110 transition-opacity duration-1000"
-        style={{ backgroundImage: `url('/bg.jpg')` }}
+        style={{ backgroundImage: `url('/bg.webp')` }}
       />
       
       {/* Subtle Vignette Overlay & Dark Gradient */}
