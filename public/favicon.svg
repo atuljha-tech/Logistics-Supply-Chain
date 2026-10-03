@@ -1,12 +1,32 @@
 <svg width="512" height="512" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <rect width="512" height="512" rx="110" fill="#0A0A0A"/>
+  <rect width="512" height="512" rx="110" fill="#0A0F0D"/>
   <rect x="16" y="16" width="480" height="480" rx="94" stroke="#4B6F44" stroke-width="12" stroke-opacity="0.6"/>
-  <circle cx="256" cy="256" r="180" stroke="#6B8E23" stroke-width="6" stroke-dasharray="24 16" stroke-opacity="0.5"/>
-  <circle cx="256" cy="256" r="130" stroke="#2A9D8F" stroke-width="4" stroke-opacity="0.4"/>
-  <line x1="256" y1="40" x2="256" y2="472" stroke="#4B6F44" stroke-width="4" stroke-opacity="0.4"/>
-  <line x1="40" y1="256" x2="472" y2="256" stroke="#4B6F44" stroke-width="4" stroke-opacity="0.4"/>
-  <path d="M256 96L370 148V256C370 338 316 406 256 432C196 406 142 338 142 256V148L256 96Z" fill="#1E2E1B" stroke="#4B6F44" stroke-width="14"/>
-  <path d="M256 120L348 162V256C348 322 304 378 256 400C208 378 164 322 164 256V162L256 120Z" fill="#0A0A0A" stroke="#6B8E23" stroke-width="6" stroke-opacity="0.8"/>
-  <path d="M305 185C292 172 274 166 256 166C220 166 195 186 195 212C195 234 209 246 244 254L266 259C298 266 316 280 316 308C316 340 286 360 248 360C222 360 198 350 180 330L206 302C218 318 234 326 252 326C272 326 284 316 284 300C284 284 272 274 240 267L218 262C188 255 166 238 166 210C166 178 198 156 244 156C270 156 292 166 310 184L305 185Z" fill="#F5F5F5"/>
-  <circle cx="256" cy="256" r="14" fill="#2A9D8F"/>
+  
+  <!-- Outer Tactical Radar Ring -->
+  <circle cx="256" cy="256" r="190" stroke="#6B8E23" stroke-width="6" stroke-dasharray="28 18" stroke-opacity="0.5"/>
+  <circle cx="256" cy="256" r="140" stroke="#2A9D8F" stroke-width="4" stroke-opacity="0.4"/>
+  
+  <!-- Tactical Crosshair Grid -->
+  <line x1="256" y1="40" x2="256" y2="472" stroke="#4B6F44" stroke-width="4" stroke-opacity="0.35"/>
+  <line x1="40" y1="256" x2="472" y2="256" stroke="#4B6F44" stroke-width="4" stroke-opacity="0.35"/>
+  
+  <!-- Isometric Cargo Container / Supply Box -->
+  <!-- Top Face -->
+  <polygon points="256,130 360,185 256,240 152,185" fill="#3A5A35" stroke="#6B8E23" stroke-width="8" stroke-linejoin="round"/>
+  <!-- Left Face -->
+  <polygon points="152,185 256,240 256,365 152,310" fill="#1E2E1B" stroke="#4B6F44" stroke-width="8" stroke-linejoin="round"/>
+  <!-- Right Face -->
+  <polygon points="256,240 360,185 360,310 256,365" fill="#294025" stroke="#4B6F44" stroke-width="8" stroke-linejoin="round"/>
+  
+  <!-- Tactical Container Ribs / Straps -->
+  <line x1="204" y1="213" x2="204" y2="338" stroke="#6B8E23" stroke-width="6" stroke-opacity="0.6"/>
+  <line x1="308" y1="213" x2="308" y2="338" stroke="#6B8E23" stroke-width="6" stroke-opacity="0.6"/>
+
+  <!-- Center Tactical GPS Tracking Beacon -->
+  <circle cx="256" cy="240" r="16" fill="#10B981"/>
+  <circle cx="256" cy="240" r="30" stroke="#10B981" stroke-width="4" stroke-opacity="0.6"/>
+  <circle cx="256" cy="240" r="44" stroke="#10B981" stroke-width="2" stroke-opacity="0.3"/>
+
+  <!-- Forward Supply Arrow -->
+  <path d="M256 80 L276 110 L256 102 L236 110 Z" fill="#10B981"/>
 </svg>
