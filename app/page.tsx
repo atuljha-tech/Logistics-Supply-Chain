@@ -215,7 +215,7 @@ export default function LandingPage() {
   ]
 
   return (
-    <div className="min-h-screen bg-[#050505] text-[#F5F5F5] font-sans selection:bg-[#4B6F44]/30">
+    <div className="min-h-screen text-[#F5F5F5] font-sans selection:bg-[#4B6F44]/30">
       {/* Top Command Navbar */}
       <header className="sticky top-0 z-40 bg-[#0A0A0A]/95 backdrop-blur-md border-b border-[#4B6F44]/40 px-4 md:px-8 py-3.5 flex items-center justify-between">
         <div className="flex items-center gap-3">
@@ -237,17 +237,17 @@ export default function LandingPage() {
       <main className="w-full space-y-20">
         {/* FULL SCREEN HERO SECTION WITH BG.JPG */}
         <section className="relative w-full overflow-hidden border-b border-[#4B6F44]/30 py-16 md:py-24 px-4 md:px-8">
-          {/* Full Screen Background Image from public/bg.jpg */}
-          <div className="absolute inset-0 pointer-events-none -z-10">
+          {/* Full Screen Background Image from public/bg.jpg with correct z-index */}
+          <div className="absolute inset-0 pointer-events-none z-0">
             <img 
               src="/bg.jpg" 
               alt="Sentinel Supply Hero Background" 
               className="w-full h-full object-cover object-center opacity-85 filter brightness-100 contrast-105"
             />
+            {/* Subtle Gradient Overlays behind text */}
+            <div className="absolute inset-0 bg-gradient-to-r from-[#050505]/90 via-[#050505]/50 to-transparent" />
+            <div className="absolute inset-0 bg-gradient-to-t from-[#050505] via-transparent to-[#050505]/30" />
           </div>
-          {/* Light gradient overlay just behind text to keep text sharp while bg.jpg is fully visible */}
-          <div className="absolute inset-0 bg-gradient-to-r from-[#050505]/85 via-[#050505]/40 to-transparent pointer-events-none -z-10" />
-          <div className="absolute inset-0 bg-gradient-to-t from-[#050505] via-transparent to-[#050505]/30 pointer-events-none -z-10" />
 
           <div className="max-w-7xl mx-auto space-y-12 relative z-10">
             {/* Hero Text & CTA Buttons */}

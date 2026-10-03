@@ -5,10 +5,10 @@ import { motion } from 'framer-motion'
 
 export const MapBackground: React.FC = () => {
   return (
-    <div className="fixed inset-0 -z-20 overflow-hidden pointer-events-none bg-[#050505]">
+    <div className="fixed inset-0 -z-10 overflow-hidden pointer-events-none bg-[#050505]">
       {/* Background Image from public/bg.jpg */}
       <div 
-        className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-50 filter brightness-95 contrast-110 transition-opacity duration-1000"
+        className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-60 filter brightness-95 contrast-110 transition-opacity duration-1000"
         style={{ backgroundImage: `url('/bg.jpg')` }}
       />
       
