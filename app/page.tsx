@@ -237,16 +237,16 @@ export default function LandingPage() {
       <main className="w-full space-y-20">
         {/* FULL SCREEN HERO SECTION WITH BG.WEBP */}
         <section className="relative w-full overflow-hidden border-b border-[#4B6F44]/30 py-16 md:py-24 px-4 md:px-8">
-          {/* Full Screen Background Image from public/bg.webp with correct z-index */}
+          {/* Full Screen Background Image from public/bg.webp with faded opacity */}
           <div className="absolute inset-0 pointer-events-none z-0">
             <img 
               src="/bg.webp" 
               alt="Sentinel Supply Hero Background" 
-              className="w-full h-full object-cover object-center opacity-85 filter brightness-100 contrast-105"
+              className="w-full h-full object-cover object-center opacity-45 filter brightness-85 contrast-100"
             />
-            {/* Subtle Gradient Overlays behind text */}
-            <div className="absolute inset-0 bg-gradient-to-r from-[#050505]/90 via-[#050505]/50 to-transparent" />
-            <div className="absolute inset-0 bg-gradient-to-t from-[#050505] via-transparent to-[#050505]/30" />
+            {/* Subtle Faded Gradient Overlays */}
+            <div className="absolute inset-0 bg-gradient-to-r from-[#050505]/95 via-[#050505]/70 to-[#050505]/40" />
+            <div className="absolute inset-0 bg-gradient-to-t from-[#050505] via-transparent to-[#050505]/50" />
           </div>
 
           <div className="max-w-7xl mx-auto space-y-12 relative z-10">

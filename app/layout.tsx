@@ -32,6 +32,11 @@ export const metadata: Metadata = {
     'Asset Tracking',
     'Defense Intelligence'
   ],
+  icons: {
+    icon: '/favicon.svg',
+    shortcut: '/icon.svg',
+    apple: '/icon.svg',
+  },
 }
 
 export default function RootLayout({
