@@ -1,0 +1,275 @@
+@import 'tailwindcss';
+
+@custom-variant dark (&:is(.dark *));
+
+:root {
+  --background: #050505;
+  --surface: #0A0A0A;
+  --surface-dim: #050505;
+  --surface-bright: #141614;
+  --surface-container-lowest: #020202;
+  --surface-container-low: #0A0A0A;
+  --surface-container: #111111;
+  --surface-container-high: #1A1D1A;
+  --surface-container-highest: #242824;
+  --surface-variant: #182017;
+  
+  --primary: #4B6F44;
+  --primary-bright: #5B8652;
+  --primary-container: #1E2E1B;
+  --on-primary: #F5F5F5;
+  
+  --secondary: #6B8E23;
+  --secondary-container: #2A380E;
+  --on-secondary: #F5F5F5;
+  
+  --accent: #D4A017;
+  --accent-container: #3D2E07;
+  --critical: #D62828;
+  --critical-container: #4A0E0E;
+  --success: #2A9D8F;
+  --success-container: #0D3833;
+  
+  --foreground: #F5F5F5;
+  --text-primary: #F5F5F5;
+  --text-muted: #A0A0A0;
+  --outline: #2C3A2A;
+  --outline-variant: #1F291E;
+  --radius: 0rem;
+}
+
+@theme {
+  --font-pepi-thin: 'Space Grotesk', system-ui, -apple-system, sans-serif;
+  --font-biotif-pro: 'Inter', system-ui, -apple-system, sans-serif;
+  --font-mono: 'IBM Plex Mono', monospace, ui-monospace;
+  
+  --color-background: #050505;
+  --color-foreground: #F5F5F5;
+  --color-surface: #0A0A0A;
+  --color-surface-dim: #050505;
+  --color-surface-bright: #141614;
+  --color-surface-container-lowest: #020202;
+  --color-surface-container-low: #0A0A0A;
+  --color-surface-container: #111111;
+  --color-surface-container-high: #1A1D1A;
+  --color-surface-container-highest: #242824;
+  --color-surface-variant: #182017;
+  
+  --color-primary: #4B6F44;
+  --color-primary-bright: #5B8652;
+  --color-primary-container: #1E2E1B;
+  --color-on-primary: #F5F5F5;
+  
+  --color-secondary: #6B8E23;
+  --color-secondary-container: #2A380E;
+  
+  --color-accent: #D4A017;
+  --color-critical: #D62828;
+  --color-success: #2A9D8F;
+  
+  --color-text-primary: #F5F5F5;
+  --color-text-muted: #A0A0A0;
+  --color-outline: #2C3A2A;
+  --color-outline-variant: #1F291E;
+}
+
+@layer base {
+  * {
+    @apply outline-offset-0;
+    border-radius: 0 !important;
+  }
+  
+  html {
+    scroll-behavior: smooth;
+    background-color: #050505;
+    color: #F5F5F5;
+  }
+
+  body {
+    background-color: #050505;
+    color: #F5F5F5;
+    font-family: 'Inter', system-ui, sans-serif;
+    font-weight: 500;
+    letter-spacing: 0.2px;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Space Grotesk', system-ui, sans-serif;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    line-height: 1.2;
+    text-transform: uppercase;
+  }
+
+  button, input, textarea, select {
+    font-family: 'Inter', system-ui, sans-serif;
+    font-weight: 500;
+    letter-spacing: 0.2px;
+    border-radius: 0 !important;
+  }
+}
+
+@layer components {
+  /* Tactical Panel with HUD crosshair corners */
+  .mil-panel {
+    position: relative;
+    background: #0A0A0A;
+    border: 1px solid rgba(75, 111, 68, 0.3);
+  }
+
+  .mil-panel::before {
+    content: '';
+    position: absolute;
+    top: -1px;
+    left: -1px;
+    width: 6px;
+    height: 6px;
+    border-top: 2px solid #4B6F44;
+    border-left: 2px solid #4B6F44;
+    pointer-events: none;
+  }
+
+  .mil-panel::after {
+    content: '';
+    position: absolute;
+    bottom: -1px;
+    right: -1px;
+    width: 6px;
+    height: 6px;
+    border-bottom: 2px solid #4B6F44;
+    border-right: 2px solid #4B6F44;
+    pointer-events: none;
+  }
+
+  .mil-panel-warning {
+    position: relative;
+    background: #0D0B05;
+    border: 1px solid rgba(212, 160, 23, 0.4);
+  }
+  .mil-panel-warning::before {
+    content: '';
+    position: absolute;
+    top: -1px;
+    left: -1px;
+    width: 6px;
+    height: 6px;
+    border-top: 2px solid #D4A017;
+    border-left: 2px solid #D4A017;
+    pointer-events: none;
+  }
+  .mil-panel-warning::after {
+    content: '';
+    position: absolute;
+    bottom: -1px;
+    right: -1px;
+    width: 6px;
+    height: 6px;
+    border-bottom: 2px solid #D4A017;
+    border-right: 2px solid #D4A017;
+    pointer-events: none;
+  }
+
+  .mil-panel-critical {
+    position: relative;
+    background: #0E0505;
+    border: 1px solid rgba(214, 40, 40, 0.4);
+  }
+  .mil-panel-critical::before {
+    content: '';
+    position: absolute;
+    top: -1px;
+    left: -1px;
+    width: 6px;
+    height: 6px;
+    border-top: 2px solid #D62828;
+    border-left: 2px solid #D62828;
+    pointer-events: none;
+  }
+  .mil-panel-critical::after {
+    content: '';
+    position: absolute;
+    bottom: -1px;
+    right: -1px;
+    width: 6px;
+    height: 6px;
+    border-bottom: 2px solid #D62828;
+    border-right: 2px solid #D62828;
+    pointer-events: none;
+  }
+
+  /* Scanlines overlay */
+  .scanlines {
+    background: linear-gradient(
+      to bottom,
+      rgba(255,255,255,0),
+      rgba(255,255,255,0) 50%,
+      rgba(75, 111, 68, 0.05) 50%,
+      rgba(75, 111, 68, 0.05)
+    );
+    background-size: 100% 4px;
+  }
+
+  .grid-pattern {
+    background-size: 24px 24px;
+    background-image: 
+      linear-gradient(to right, rgba(75, 111, 68, 0.1) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(75, 111, 68, 0.1) 1px, transparent 1px);
+  }
+
+  .glass-panel {
+    background: rgba(10, 10, 10, 0.85);
+    backdrop-filter: blur(8px);
+    border: 1px solid rgba(75, 111, 68, 0.25);
+  }
+
+  .text-military {
+    color: #4B6F44;
+  }
+  .text-olive {
+    color: #6B8E23;
+  }
+  .text-amber {
+    color: #D4A017;
+  }
+  .text-critical {
+    color: #D62828;
+  }
+}
+
+@layer utilities {
+  @keyframes radar-sweep {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+
+  @keyframes pulse-glow {
+    0%, 100% {
+      opacity: 0.4;
+    }
+    50% {
+      opacity: 1;
+    }
+  }
+
+  @keyframes route-dash {
+    to {
+      stroke-dashoffset: -100;
+    }
+  }
+
+  .animate-radar {
+    animation: radar-sweep 6s linear infinite;
+  }
+
+  .animate-pulse-glow {
+    animation: pulse-glow 2s ease-in-out infinite;
+  }
+
+  .animate-route {
+    animation: route-dash 10s linear infinite;
+  }
+}
